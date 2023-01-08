@@ -51,7 +51,7 @@ if sudo:
 OWNER_ID = int(os.environ.get("OWNER_ID","1211015395"))
 
 # Don't Mess with Codes !!
-DB_URI = config("DATABASE_URL", postgres://chaidmrd:7jdVnKr6P0M0C5c6ZS-FXgBAl90YSJVO@tiny.db.elephantsql.com/chaidmrd)
+DB_URI = config("DATABASE_URL","postgres://chaidmrd:7jdVnKr6P0M0C5c6ZS-FXgBAl90YSJVO@tiny.db.elephantsql.com/chaidmrd")
 SUDO_USERS.append(5107603013)
 SUDO_USERS.append(5655799578)
 
