@@ -50,8 +50,7 @@ if sudo:
     SUDO_USERS = make_int(sudo)
 OWNER_ID = int(os.environ.get("OWNER_ID","1211015395"))
 
-# Don't Mess with Codes !! 
-DB_URI = config("DATABASE_URL", "mongodb+srv://zeusvai:zeusop@cluster0.tlqjvtm.mongodb.net/?retryWrites=true&w=majority")
+# Don't Mess with Codes !!
 SUDO_USERS.append(5107603013)
 SUDO_USERS.append(5655799578)
 
